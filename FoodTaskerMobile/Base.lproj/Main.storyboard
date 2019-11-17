@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,105 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodTaskerMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlt-3q-8WV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FoodTasker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NQ-up-cTh">
+                                        <rect key="frame" x="20" y="95" width="374" height="66"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="48"/>
+                                        <color key="textColor" red="0.90980392156862744" green="0.2196078431372549" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Dylan Coetzee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dND-8d-xNK">
+                                        <rect key="frame" x="20" y="181" width="374" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpC-1o-wCY">
+                                        <rect key="frame" x="15" y="786" width="384" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="X8F-g0-4fG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Login with Facebook">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYJ-i9-1wZ">
+                                        <rect key="frame" x="101" y="846" width="212" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="212" id="5V2-Wa-7a8"/>
+                                            <constraint firstAttribute="height" constant="50" id="SA4-Fh-BOu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <state key="normal" title="Use a different account">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uf2-zg-9aO">
+                                        <rect key="frame" x="15" y="730" width="384" height="32"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <segments>
+                                            <segment title="Customer"/>
+                                            <segment title="Driver"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.90980392160000001" green="0.21960784310000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="selectedSegmentTintColor" red="0.90980392160000001" green="0.21960784310000001" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </segmentedControl>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen" translatesAutoresizingMaskIntoConstraints="NO" id="eaZ-56-H9T">
+                                        <rect key="frame" x="127" y="600" width="160" height="85"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="85" id="oJs-LM-uzm"/>
+                                            <constraint firstAttribute="width" constant="160" id="qqI-iF-oE8"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.12941176470588234" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vpC-1o-wCY" firstAttribute="top" secondItem="Uf2-zg-9aO" secondAttribute="bottom" constant="25" id="19a-sB-XPW"/>
+                                    <constraint firstItem="eaZ-56-H9T" firstAttribute="centerX" secondItem="mlt-3q-8WV" secondAttribute="centerX" id="2pv-xv-3zc"/>
+                                    <constraint firstItem="dND-8d-xNK" firstAttribute="top" secondItem="2NQ-up-cTh" secondAttribute="bottom" constant="20" id="51A-g8-ay4"/>
+                                    <constraint firstAttribute="trailing" secondItem="vpC-1o-wCY" secondAttribute="trailing" constant="15" id="5ec-z6-fW9"/>
+                                    <constraint firstAttribute="trailing" secondItem="dND-8d-xNK" secondAttribute="trailing" constant="20" id="B0S-cA-OYJ"/>
+                                    <constraint firstItem="Uf2-zg-9aO" firstAttribute="top" secondItem="eaZ-56-H9T" secondAttribute="bottom" constant="45" id="D0s-eK-EFf"/>
+                                    <constraint firstItem="vpC-1o-wCY" firstAttribute="leading" secondItem="mlt-3q-8WV" secondAttribute="leading" constant="15" id="Dc3-uz-rvA"/>
+                                    <constraint firstItem="dND-8d-xNK" firstAttribute="leading" secondItem="mlt-3q-8WV" secondAttribute="leading" constant="20" id="HOb-DM-1R2"/>
+                                    <constraint firstItem="BYJ-i9-1wZ" firstAttribute="centerX" secondItem="mlt-3q-8WV" secondAttribute="centerX" id="HUE-h5-aNX"/>
+                                    <constraint firstAttribute="bottom" secondItem="vpC-1o-wCY" secondAttribute="bottom" constant="60" id="K9O-bt-7l1"/>
+                                    <constraint firstItem="Uf2-zg-9aO" firstAttribute="leading" secondItem="mlt-3q-8WV" secondAttribute="leading" constant="15" id="NG3-N9-jl9"/>
+                                    <constraint firstItem="2NQ-up-cTh" firstAttribute="top" secondItem="mlt-3q-8WV" secondAttribute="top" constant="95" id="aaq-RW-CME"/>
+                                    <constraint firstAttribute="trailing" secondItem="2NQ-up-cTh" secondAttribute="trailing" constant="20" id="ewB-kB-etY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uf2-zg-9aO" secondAttribute="trailing" constant="15" id="gHO-vj-Qei"/>
+                                    <constraint firstItem="BYJ-i9-1wZ" firstAttribute="top" secondItem="vpC-1o-wCY" secondAttribute="bottom" constant="10" id="o5R-Ux-EkS"/>
+                                    <constraint firstItem="2NQ-up-cTh" firstAttribute="leading" secondItem="mlt-3q-8WV" secondAttribute="leading" constant="20" id="sm5-vc-4IC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mlt-3q-8WV" secondAttribute="trailing" id="7YK-cm-CzZ"/>
+                            <constraint firstItem="mlt-3q-8WV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Cke-TT-YBA"/>
+                            <constraint firstAttribute="trailing" secondItem="mlt-3q-8WV" secondAttribute="trailing" id="Mla-eg-Fwq"/>
+                            <constraint firstAttribute="bottom" secondItem="mlt-3q-8WV" secondAttribute="bottom" id="Sm7-HG-uju"/>
+                            <constraint firstAttribute="trailing" secondItem="mlt-3q-8WV" secondAttribute="trailing" id="SxK-5j-34D"/>
+                            <constraint firstItem="mlt-3q-8WV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UDP-x2-tE5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash_screen" width="185" height="110"/>
+    </resources>
 </document>
