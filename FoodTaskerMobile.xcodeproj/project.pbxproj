@@ -3,15 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		848A0F8F238A9C8100291110 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A0F8E238A9C8100291110 /* PaymentViewController.swift */; };
+		848A0F91238AB56300291110 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A0F90238AB56300291110 /* OrderViewController.swift */; };
 		848A945923872CA600BA4C98 /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A945823872CA600BA4C98 /* TrayViewController.swift */; };
 		848A945D23872F0900BA4C98 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A945B23872EF700BA4C98 /* MapKit.framework */; };
+		84A9AFF2238AFA49005C44A0 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9AFF1238AFA49005C44A0 /* FBManager.swift */; };
+		84A9AFF4238B0126005C44A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9AFF3238B0126005C44A0 /* LoginViewController.swift */; };
 		84EBE033238172050076A0EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBE032238172050076A0EB /* AppDelegate.swift */; };
 		84EBE035238172050076A0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBE034238172050076A0EB /* SceneDelegate.swift */; };
-		84EBE037238172050076A0EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBE036238172050076A0EB /* ViewController.swift */; };
 		84EBE03A238172050076A0EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EBE038238172050076A0EB /* Main.storyboard */; };
 		84EBE03C238172060076A0EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84EBE03B238172060076A0EB /* Assets.xcassets */; };
 		84EBE03F238172060076A0EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EBE03D238172060076A0EB /* LaunchScreen.storyboard */; };
@@ -22,6 +25,9 @@
 		84EBE06A23848C040076A0EB /* CustomerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBE06923848C040076A0EB /* CustomerMenuViewController.swift */; };
 		84EBE06C2385CD6A0076A0EB /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBE06B2385CD6A0076A0EB /* MealListTableViewController.swift */; };
 		84EBE06E2385DC8D0076A0EB /* MealDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBE06D2385DC8D0076A0EB /* MealDetailsViewController.swift */; };
+		941AFF652A174B3BA5FCE252 /* Pods_FoodTaskerMobileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F64C20CFC350FC966A894833 /* Pods_FoodTaskerMobileTests.framework */; };
+		E772714027E1C3BDBE0910A8 /* Pods_FoodTaskerMobile_FoodTaskerMobileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FB151B546771CDC304791E3 /* Pods_FoodTaskerMobile_FoodTaskerMobileUITests.framework */; };
+		ECACFC6545FC567B4E873D95 /* Pods_FoodTaskerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F48B334550EC80DC3581A6D6 /* Pods_FoodTaskerMobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +48,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0EEF4848B812B1CB0EFD3D51 /* Pods-FoodTaskerMobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobileTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobileTests/Pods-FoodTaskerMobileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2FB151B546771CDC304791E3 /* Pods_FoodTaskerMobile_FoodTaskerMobileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTaskerMobile_FoodTaskerMobileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A333E213AA4EE2E11074FF1 /* Pods-FoodTaskerMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobileTests.release.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobileTests/Pods-FoodTaskerMobileTests.release.xcconfig"; sourceTree = "<group>"; };
+		5AFB7A5F15C1C6EE94C77C79 /* Pods-FoodTaskerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.release.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.release.xcconfig"; sourceTree = "<group>"; };
+		6470FA2743EA1C383BF75B81 /* Pods-FoodTaskerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.debug.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		848A0F8E238A9C8100291110 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		848A0F90238AB56300291110 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		848A945823872CA600BA4C98 /* TrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
 		848A945B23872EF700BA4C98 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		84A9AFF0238AED20005C44A0 /* FoodTaskerMobileDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodTaskerMobileDebug.entitlements; sourceTree = "<group>"; };
+		84A9AFF1238AFA49005C44A0 /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
+		84A9AFF3238B0126005C44A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		84EBE02F238172050076A0EB /* FoodTaskerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTaskerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EBE032238172050076A0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EBE034238172050076A0EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84EBE036238172050076A0EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84EBE039238172050076A0EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84EBE03B238172060076A0EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84EBE03E238172060076A0EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,6 +80,10 @@
 		84EBE06923848C040076A0EB /* CustomerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMenuViewController.swift; sourceTree = "<group>"; };
 		84EBE06B2385CD6A0076A0EB /* MealListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
 		84EBE06D2385DC8D0076A0EB /* MealDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsViewController.swift; sourceTree = "<group>"; };
+		D7533C04250530A678E699A0 /* Pods-FoodTaskerMobile-FoodTaskerMobileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile-FoodTaskerMobileUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobile-FoodTaskerMobileUITests/Pods-FoodTaskerMobile-FoodTaskerMobileUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F48B334550EC80DC3581A6D6 /* Pods_FoodTaskerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTaskerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F64C20CFC350FC966A894833 /* Pods_FoodTaskerMobileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTaskerMobileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B431559D17242E80B12220 /* Pods-FoodTaskerMobile-FoodTaskerMobileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile-FoodTaskerMobileUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobile-FoodTaskerMobileUITests/Pods-FoodTaskerMobile-FoodTaskerMobileUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848A945D23872F0900BA4C98 /* MapKit.framework in Frameworks */,
+				ECACFC6545FC567B4E873D95 /* Pods_FoodTaskerMobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				941AFF652A174B3BA5FCE252 /* Pods_FoodTaskerMobileTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,16 +108,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E772714027E1C3BDBE0910A8 /* Pods_FoodTaskerMobile_FoodTaskerMobileUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F8BE4A9095F8FF60B0B1DCD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6470FA2743EA1C383BF75B81 /* Pods-FoodTaskerMobile.debug.xcconfig */,
+				5AFB7A5F15C1C6EE94C77C79 /* Pods-FoodTaskerMobile.release.xcconfig */,
+				F7B431559D17242E80B12220 /* Pods-FoodTaskerMobile-FoodTaskerMobileUITests.debug.xcconfig */,
+				D7533C04250530A678E699A0 /* Pods-FoodTaskerMobile-FoodTaskerMobileUITests.release.xcconfig */,
+				0EEF4848B812B1CB0EFD3D51 /* Pods-FoodTaskerMobileTests.debug.xcconfig */,
+				3A333E213AA4EE2E11074FF1 /* Pods-FoodTaskerMobileTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		848A945A23872EF700BA4C98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				848A945B23872EF700BA4C98 /* MapKit.framework */,
+				F48B334550EC80DC3581A6D6 /* Pods_FoodTaskerMobile.framework */,
+				2FB151B546771CDC304791E3 /* Pods_FoodTaskerMobile_FoodTaskerMobileUITests.framework */,
+				F64C20CFC350FC966A894833 /* Pods_FoodTaskerMobileTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +147,7 @@
 				84EBE053238172060076A0EB /* FoodTaskerMobileUITests */,
 				84EBE030238172050076A0EB /* Products */,
 				848A945A23872EF700BA4C98 /* Frameworks */,
+				4F8BE4A9095F8FF60B0B1DCD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,10 +164,10 @@
 		84EBE031238172050076A0EB /* FoodTaskerMobile */ = {
 			isa = PBXGroup;
 			children = (
+				84A9AFF0238AED20005C44A0 /* FoodTaskerMobileDebug.entitlements */,
 				84EBE066238321FD0076A0EB /* Lib */,
 				84EBE032238172050076A0EB /* AppDelegate.swift */,
 				84EBE034238172050076A0EB /* SceneDelegate.swift */,
-				84EBE036238172050076A0EB /* ViewController.swift */,
 				84EBE038238172050076A0EB /* Main.storyboard */,
 				84EBE03B238172060076A0EB /* Assets.xcassets */,
 				84EBE03D238172060076A0EB /* LaunchScreen.storyboard */,
@@ -138,6 +177,10 @@
 				84EBE06B2385CD6A0076A0EB /* MealListTableViewController.swift */,
 				84EBE06D2385DC8D0076A0EB /* MealDetailsViewController.swift */,
 				848A945823872CA600BA4C98 /* TrayViewController.swift */,
+				848A0F8E238A9C8100291110 /* PaymentViewController.swift */,
+				848A0F90238AB56300291110 /* OrderViewController.swift */,
+				84A9AFF1238AFA49005C44A0 /* FBManager.swift */,
+				84A9AFF3238B0126005C44A0 /* LoginViewController.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -177,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84EBE059238172060076A0EB /* Build configuration list for PBXNativeTarget "FoodTaskerMobile" */;
 			buildPhases = (
+				7972FA78D492EEA8CBBBE75C /* [CP] Check Pods Manifest.lock */,
 				84EBE02B238172050076A0EB /* Sources */,
 				84EBE02C238172050076A0EB /* Frameworks */,
 				84EBE02D238172050076A0EB /* Resources */,
+				4EB67E7D522128D08C9FC741 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84EBE05C238172060076A0EB /* Build configuration list for PBXNativeTarget "FoodTaskerMobileTests" */;
 			buildPhases = (
+				AEEA07D20AA74081F6DD8B3F /* [CP] Check Pods Manifest.lock */,
 				84EBE041238172060076A0EB /* Sources */,
 				84EBE042238172060076A0EB /* Frameworks */,
 				84EBE043238172060076A0EB /* Resources */,
@@ -212,9 +258,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84EBE05F238172060076A0EB /* Build configuration list for PBXNativeTarget "FoodTaskerMobileUITests" */;
 			buildPhases = (
+				BB6E1868B9BA51BDF78187A9 /* [CP] Check Pods Manifest.lock */,
 				84EBE04C238172060076A0EB /* Sources */,
 				84EBE04D238172060076A0EB /* Frameworks */,
 				84EBE04E238172060076A0EB /* Resources */,
+				342EBD24F10C5050B2050332 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,19 +345,125 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		342EBD24F10C5050B2050332 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodTaskerMobile-FoodTaskerMobileUITests/Pods-FoodTaskerMobile-FoodTaskerMobileUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodTaskerMobile-FoodTaskerMobileUITests/Pods-FoodTaskerMobile-FoodTaskerMobileUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodTaskerMobile-FoodTaskerMobileUITests/Pods-FoodTaskerMobile-FoodTaskerMobileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EB67E7D522128D08C9FC741 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7972FA78D492EEA8CBBBE75C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodTaskerMobile-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEEA07D20AA74081F6DD8B3F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodTaskerMobileTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB6E1868B9BA51BDF78187A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodTaskerMobile-FoodTaskerMobileUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84EBE02B238172050076A0EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A9AFF4238B0126005C44A0 /* LoginViewController.swift in Sources */,
 				84EBE06A23848C040076A0EB /* CustomerMenuViewController.swift in Sources */,
-				84EBE037238172050076A0EB /* ViewController.swift in Sources */,
+				84A9AFF2238AFA49005C44A0 /* FBManager.swift in Sources */,
+				848A0F91238AB56300291110 /* OrderViewController.swift in Sources */,
 				84EBE068238483370076A0EB /* RestaurantViewController.swift in Sources */,
 				84EBE033238172050076A0EB /* AppDelegate.swift in Sources */,
 				84EBE035238172050076A0EB /* SceneDelegate.swift in Sources */,
 				848A945923872CA600BA4C98 /* TrayViewController.swift in Sources */,
 				84EBE06C2385CD6A0076A0EB /* MealListTableViewController.swift in Sources */,
 				84EBE06E2385DC8D0076A0EB /* MealDetailsViewController.swift in Sources */,
+				848A0F8F238A9C8100291110 /* PaymentViewController.swift in Sources */,
 				84EBE065238321DD0076A0EB /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,9 +635,13 @@
 		};
 		84EBE05A238172060076A0EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6470FA2743EA1C383BF75B81 /* Pods-FoodTaskerMobile.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FoodTaskerMobile/FoodTaskerMobileDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FoodTaskerMobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -501,7 +659,10 @@
 		};
 		84EBE05B238172060076A0EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AFB7A5F15C1C6EE94C77C79 /* Pods-FoodTaskerMobile.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_SEARCH_USER_PATHS = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -520,6 +681,7 @@
 		};
 		84EBE05D238172060076A0EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EEF4848B812B1CB0EFD3D51 /* Pods-FoodTaskerMobileTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -541,6 +703,7 @@
 		};
 		84EBE05E238172060076A0EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A333E213AA4EE2E11074FF1 /* Pods-FoodTaskerMobileTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -562,6 +725,7 @@
 		};
 		84EBE060238172060076A0EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B431559D17242E80B12220 /* Pods-FoodTaskerMobile-FoodTaskerMobileUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -581,6 +745,7 @@
 		};
 		84EBE061238172060076A0EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7533C04250530A678E699A0 /* Pods-FoodTaskerMobile-FoodTaskerMobileUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
