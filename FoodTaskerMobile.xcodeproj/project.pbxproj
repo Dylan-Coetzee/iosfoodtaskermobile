@@ -13,6 +13,7 @@
 		848A945D23872F0900BA4C98 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848A945B23872EF700BA4C98 /* MapKit.framework */; };
 		84A9AFF2238AFA49005C44A0 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9AFF1238AFA49005C44A0 /* FBManager.swift */; };
 		84A9AFF4238B0126005C44A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9AFF3238B0126005C44A0 /* LoginViewController.swift */; };
+		84A9AFF6238B2C38005C44A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9AFF5238B2C38005C44A0 /* User.swift */; };
 		84EBE033238172050076A0EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBE032238172050076A0EB /* AppDelegate.swift */; };
 		84EBE035238172050076A0EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EBE034238172050076A0EB /* SceneDelegate.swift */; };
 		84EBE03A238172050076A0EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84EBE038238172050076A0EB /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		84A9AFF0238AED20005C44A0 /* FoodTaskerMobileDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodTaskerMobileDebug.entitlements; sourceTree = "<group>"; };
 		84A9AFF1238AFA49005C44A0 /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
 		84A9AFF3238B0126005C44A0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		84A9AFF5238B2C38005C44A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84EBE02F238172050076A0EB /* FoodTaskerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTaskerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EBE032238172050076A0EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84EBE034238172050076A0EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				848A0F90238AB56300291110 /* OrderViewController.swift */,
 				84A9AFF1238AFA49005C44A0 /* FBManager.swift */,
 				84A9AFF3238B0126005C44A0 /* LoginViewController.swift */,
+				84A9AFF5238B2C38005C44A0 /* User.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A9AFF6238B2C38005C44A0 /* User.swift in Sources */,
 				84A9AFF4238B0126005C44A0 /* LoginViewController.swift in Sources */,
 				84EBE06A23848C040076A0EB /* CustomerMenuViewController.swift in Sources */,
 				84A9AFF2238AFA49005C44A0 /* FBManager.swift in Sources */,

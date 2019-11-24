@@ -36,7 +36,10 @@ class LoginViewController: UIViewController {
                 from: self,
                 handler: { (result, error) in
                     if(error == nil) {
-                        self.fbLoginSuccess = true
+                        FBManager.getFBUserData(completionHandler: {
+                            self.fbLoginSuccess = true
+                            self.viewDidAppear(true)
+                        })
                     }
             })
         }

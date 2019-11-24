@@ -16,4 +16,10 @@ class CustomerMenuViewController: UITableViewController {
         view.backgroundColor = UIColor(displayP3Red: 0.19, green: 0.18, blue: 0.31, alpha: 1.0)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "CustomerLogout") {
+            FBManager.shared.logOut()
+            User.currentUser.resetInfo()
+        }
+    }
 }

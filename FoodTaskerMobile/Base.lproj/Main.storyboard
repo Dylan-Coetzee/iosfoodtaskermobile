@@ -990,7 +990,7 @@
                                         <color key="backgroundColor" red="0.14117647059999999" green="0.12941176469999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="70" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="sgX-sZ-FRz"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="CustomerLogout" id="sgX-sZ-FRz"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
