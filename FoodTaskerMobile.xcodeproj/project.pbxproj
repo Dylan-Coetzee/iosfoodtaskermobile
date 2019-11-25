@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84793C2E238C508600441E71 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84793C2D238C508600441E71 /* APIManager.swift */; };
+		84793C30238C5E7600441E71 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84793C2F238C5E7600441E71 /* Constants.swift */; };
 		848A0F8F238A9C8100291110 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A0F8E238A9C8100291110 /* PaymentViewController.swift */; };
 		848A0F91238AB56300291110 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A0F90238AB56300291110 /* OrderViewController.swift */; };
 		848A945923872CA600BA4C98 /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A945823872CA600BA4C98 /* TrayViewController.swift */; };
@@ -54,6 +56,8 @@
 		3A333E213AA4EE2E11074FF1 /* Pods-FoodTaskerMobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobileTests.release.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobileTests/Pods-FoodTaskerMobileTests.release.xcconfig"; sourceTree = "<group>"; };
 		5AFB7A5F15C1C6EE94C77C79 /* Pods-FoodTaskerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.release.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.release.xcconfig"; sourceTree = "<group>"; };
 		6470FA2743EA1C383BF75B81 /* Pods-FoodTaskerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.debug.xcconfig"; path = "Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		84793C2D238C508600441E71 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		84793C2F238C5E7600441E71 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		848A0F8E238A9C8100291110 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		848A0F90238AB56300291110 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		848A945823872CA600BA4C98 /* TrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,46 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		84793C29238C4F7A00441E71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84A9AFF5238B2C38005C44A0 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84793C2A238C4FA900441E71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84793C2B238C4FBB00441E71 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84EBE067238483370076A0EB /* RestaurantViewController.swift */,
+				84EBE06923848C040076A0EB /* CustomerMenuViewController.swift */,
+				84EBE06B2385CD6A0076A0EB /* MealListTableViewController.swift */,
+				84EBE06D2385DC8D0076A0EB /* MealDetailsViewController.swift */,
+				848A945823872CA600BA4C98 /* TrayViewController.swift */,
+				848A0F8E238A9C8100291110 /* PaymentViewController.swift */,
+				848A0F90238AB56300291110 /* OrderViewController.swift */,
+				84A9AFF3238B0126005C44A0 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84793C2C238C4FD500441E71 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				84A9AFF1238AFA49005C44A0 /* FBManager.swift */,
+				84793C2D238C508600441E71 /* APIManager.swift */,
+				84793C2F238C5E7600441E71 /* Constants.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		848A945A23872EF700BA4C98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,24 +210,18 @@
 		84EBE031238172050076A0EB /* FoodTaskerMobile */ = {
 			isa = PBXGroup;
 			children = (
-				84A9AFF0238AED20005C44A0 /* FoodTaskerMobileDebug.entitlements */,
+				84793C2C238C4FD500441E71 /* Manager */,
+				84793C2B238C4FBB00441E71 /* Controller */,
+				84793C2A238C4FA900441E71 /* View */,
+				84793C29238C4F7A00441E71 /* Model */,
 				84EBE066238321FD0076A0EB /* Lib */,
 				84EBE032238172050076A0EB /* AppDelegate.swift */,
+				84A9AFF0238AED20005C44A0 /* FoodTaskerMobileDebug.entitlements */,
 				84EBE034238172050076A0EB /* SceneDelegate.swift */,
 				84EBE038238172050076A0EB /* Main.storyboard */,
 				84EBE03B238172060076A0EB /* Assets.xcassets */,
 				84EBE03D238172060076A0EB /* LaunchScreen.storyboard */,
 				84EBE040238172060076A0EB /* Info.plist */,
-				84EBE067238483370076A0EB /* RestaurantViewController.swift */,
-				84EBE06923848C040076A0EB /* CustomerMenuViewController.swift */,
-				84EBE06B2385CD6A0076A0EB /* MealListTableViewController.swift */,
-				84EBE06D2385DC8D0076A0EB /* MealDetailsViewController.swift */,
-				848A945823872CA600BA4C98 /* TrayViewController.swift */,
-				848A0F8E238A9C8100291110 /* PaymentViewController.swift */,
-				848A0F90238AB56300291110 /* OrderViewController.swift */,
-				84A9AFF1238AFA49005C44A0 /* FBManager.swift */,
-				84A9AFF3238B0126005C44A0 /* LoginViewController.swift */,
-				84A9AFF5238B2C38005C44A0 /* User.swift */,
 			);
 			path = FoodTaskerMobile;
 			sourceTree = "<group>";
@@ -461,7 +499,9 @@
 				84EBE06A23848C040076A0EB /* CustomerMenuViewController.swift in Sources */,
 				84A9AFF2238AFA49005C44A0 /* FBManager.swift in Sources */,
 				848A0F91238AB56300291110 /* OrderViewController.swift in Sources */,
+				84793C30238C5E7600441E71 /* Constants.swift in Sources */,
 				84EBE068238483370076A0EB /* RestaurantViewController.swift in Sources */,
+				84793C2E238C508600441E71 /* APIManager.swift in Sources */,
 				84EBE033238172050076A0EB /* AppDelegate.swift in Sources */,
 				84EBE035238172050076A0EB /* SceneDelegate.swift in Sources */,
 				848A945923872CA600BA4C98 /* TrayViewController.swift in Sources */,
