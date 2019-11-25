@@ -20,7 +20,8 @@ class User {
         self.name = json["name"].string
         self.email = json["email"].string
         let imageData = json["picture"].dictionary
-        self.pictureURL = imageData?["url"]?.string
+        let urlOnly = imageData?["data"]?.dictionary
+        self.pictureURL = urlOnly?["url"]?.string
     }
     
     func resetInfo() {

@@ -54,6 +54,9 @@
                                         <state key="normal" title="Use a different account">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="facebookLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wzX-uX-VgP"/>
+                                        </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uf2-zg-9aO">
                                         <rect key="frame" x="15" y="676" width="384" height="32"/>
@@ -107,12 +110,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="IhF-gy-17o"/>
                     <connections>
+                        <outlet property="bLogin" destination="vpC-1o-wCY" id="ybZ-KA-mhX"/>
+                        <outlet property="bLogout" destination="BYJ-i9-1wZ" id="mem-hl-0gJ"/>
                         <segue destination="HC2-eG-HCx" kind="showDetail" identifier="CustomerView" id="szw-uH-c20"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="89"/>
+            <point key="canvasLocation" x="105.79710144927537" y="88.392857142857139"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="9kf-mp-RCZ">
@@ -1001,6 +1006,10 @@
                             <outlet property="delegate" destination="uAk-eH-Gs3" id="u75-Sh-xRn"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imgAvatar" destination="zkb-Oq-iRs" id="2vM-n9-3rg"/>
+                        <outlet property="lbName" destination="CHe-7G-aBb" id="Mnh-rG-9X3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RGq-Df-8bs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
