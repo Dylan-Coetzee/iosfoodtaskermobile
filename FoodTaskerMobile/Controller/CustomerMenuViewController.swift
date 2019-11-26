@@ -28,8 +28,12 @@ class CustomerMenuViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "CustomerLogout") {
-            FBManager.shared.logOut()
-            User.currentUser.resetInfo()
+            APIManager.shared.logout { (error) in
+                if(error == nil) {
+                    FBManager.shared.logOut()
+                    User.currentUser.resetInfo()
+                }
+            }
         }
     }
 }

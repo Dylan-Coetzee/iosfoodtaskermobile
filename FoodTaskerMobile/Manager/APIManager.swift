@@ -6,7 +6,7 @@
 //  Copyright © 2019 Dylan. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
@@ -21,18 +21,19 @@ class APIManager {
     
     //Apli to login user
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void) {
-        let path = "api/social/convert-token"
+        let path = "api/social/convert-token/"
+        let headers = ["Content-Type": "application/x-www-form-urlencoded"]
         let url = baseURL!.appendingPathComponent(path)
         let params: [String: Any] = [
-            "grant_type": "convert-token",
+            "grant_type": "convert_token",
             "client_id": CLIENT_ID,
             "client_secret": CLIENT_SECRET,
             "backend": "facebook",
             "token": AccessToken.current!.tokenString,
             "user_type": userType
         ]
-        
-        AF.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseJSON { (response) in
+        //JSONEncoding.default fixed fixes immuteable error in django
+        AF.request(url!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
             switch response.result {
                 
                 case .success(let value):
@@ -52,7 +53,7 @@ class APIManager {
     
     //Api to logout user
     func logout(completionHandler: @escaping (NSError?) -> Void) {
-        let path = "api/social/revoke-token"
+        let path = "api/social/revoke-token/"
         let url = baseURL!.appendingPathComponent(path)
         let params: [String: Any] = [
             "client_id": CLIENT_ID,
@@ -60,7 +61,7 @@ class APIManager {
             "token": self.accessToken,
         ]
         
-        AF.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseString { (response) in
+        AF.request(url!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
             switch response.result {
                 case .success:
                     completionHandler(nil)
