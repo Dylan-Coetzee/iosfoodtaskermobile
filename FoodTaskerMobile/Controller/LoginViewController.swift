@@ -22,11 +22,13 @@ class LoginViewController: UIViewController {
 
         if (AccessToken.current != nil)
         {
-            bLogout.isHidden = false
+            bLogout.isHidden = true
             FBManager.getFBUserData(completionHandler: {
                 self.bLogin.setTitle("Continue as \(User.currentUser.email!)", for: .normal)
                 self.bLogin.sizeToFit()
             })
+        } else {
+            bLogout.isHidden = false
         }
     }
 
