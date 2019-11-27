@@ -26,14 +26,45 @@ class CustomerMenuViewController: UITableViewController {
         view.backgroundColor = UIColor(displayP3Red: 0.19, green: 0.18, blue: 0.31, alpha: 1.0)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "CustomerLogout") {
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if(identifier == "CustomerLogout") {
             APIManager.shared.logout { (error) in
                 if(error == nil) {
                     FBManager.shared.logOut()
                     User.currentUser.resetInfo()
+
+                    //Re-render the view once logout
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let appController = storyboard.instantiateViewController(identifier: "MainController") as! LoginViewController
+
+                    let frame = UIScreen.main.bounds
+                    let window = UIWindow(frame: frame)
+
+                    window.rootViewController = appController
+                    self.performSegue(withIdentifier: "CustomerLogout", sender: self)
                 }
             }
+            return false
         }
+        return true
     }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "CustomerLogout") {
+//            APIManager.shared.logout { (error) in
+//                if(error == nil) {
+//                    FBManager.shared.logOut()
+//                    User.currentUser.resetInfo()
+//
+//                    //Re-render the view once logout
+//                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                    let appController = storyboard.instantiateViewController(identifier: "MainController") as! LoginViewController
+//
+//                    let frame = UIScreen.main.bounds
+//                    let window = UIWindow(frame: frame)
+//
+//                    window.rootViewController = appController
+//                }
+//            }
+//        }
+//    }
 }

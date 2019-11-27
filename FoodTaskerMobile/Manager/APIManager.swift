@@ -6,7 +6,7 @@
 //  Copyright © 2019 Dylan. All rights reserved.
 //
 
-//import Foundation
+import Foundation
 import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
@@ -15,14 +15,14 @@ class APIManager {
     static let shared = APIManager()
     let baseURL = NSURL(string: BASE_URL)
     
-    var accessToken = ""
-    var refreshToken = ""
+    var accessToken : String?
+    var refreshToken : String?
     var expired = Date()
     
     //Apli to login user
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void) {
         let path = "api/social/convert-token/"
-        let headers = ["Content-Type": "application/x-www-form-urlencoded"]
+        //let headers = ["Content-Type": "application/x-www-form-urlencoded"]
         let url = baseURL!.appendingPathComponent(path)
         let params: [String: Any] = [
             "grant_type": "convert_token",
@@ -33,14 +33,21 @@ class APIManager {
             "user_type": userType
         ]
         //JSONEncoding.default fixed fixes immuteable error in django
-        AF.request(url!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
+        AF.request(url!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
             switch response.result {
                 
                 case .success(let value):
-                    let jsonData = JSON(value)
-                    self.accessToken = jsonData["access_token"].string!
-                    self.refreshToken = jsonData["redresh_token"].string!
-                    self.expired = Date().addingTimeInterval(TimeInterval(jsonData["expires_in"].int!))
+                    
+                    let data = value.data(using: .utf8)!
+                    
+                    do {
+                        if let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:AnyObject]{
+                            self.accessToken = jsonData["access_token"] as! String
+                            self.refreshToken = jsonData["refresh_token"] as! String
+                            self.expired = Date().addingTimeInterval(TimeInterval(jsonData["expires_in"] as! Int))
+                        }
+                    }
+                    catch { print(error.localizedDescription) }
                     
                     completionHandler(nil)
                     
