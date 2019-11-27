@@ -132,8 +132,9 @@ class APIManager {
                         completionHandler(jsonData)
                         break
                         
-                    case .failure:
-                        completionHandler(<#JSON#>)
+                    case .failure(let fail):
+                        let jsonFail = JSON(fail)
+                        completionHandler(jsonFail)
                         break
                 }
             }
