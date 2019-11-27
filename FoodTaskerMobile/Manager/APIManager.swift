@@ -80,4 +80,63 @@ class APIManager {
             }
         }
     }
+    
+    //Refresh token when it expired
+    func refreshTokenIfNeed(completionHandler: @escaping () -> Void) {
+        let path = "api/social/refresh-token/"
+        let url = baseURL!.appendingPathComponent(path)
+        let params: [String: Any] = [
+            "access_token": self.accessToken,
+            "refresh_token": self.refreshToken,
+        ]
+        
+        if (Date() > self.expired) {
+            AF.request(url!, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseString { (response) in
+                switch response.result {
+                    case .success(let value):
+                        
+                        let data = value.data(using: .utf8)!
+                        
+                        do {
+                            if let jsonData = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:AnyObject]{
+                                self.accessToken = jsonData["access_token"] as! String
+                                //self.refreshToken = jsonData["refresh_token"] as! String
+                                self.expired = Date().addingTimeInterval(TimeInterval(jsonData["expires_in"] as! Int))
+                            }
+                        }
+                        catch { print(error.localizedDescription) }
+                        
+                        completionHandler()
+                        break
+                        
+                    case .failure:
+                        break
+                }
+            }
+        } else {
+            completionHandler()
+        }
+    }
+    
+    //API for getting Restaurant list
+    func getRestaurants(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/customer/restaurants/"
+        let url = baseURL!.appendingPathComponent(path)
+        
+        //TODO: This needs auth
+        refreshTokenIfNeed {
+            AF.request(url!, method: .get, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
+                switch response.result {
+                    case .success(let value):
+                        let jsonData = JSON(value)
+                        completionHandler(jsonData)
+                        break
+                        
+                    case .failure:
+                        completionHandler(<#JSON#>)
+                        break
+                }
+            }
+        }
+    }
 }
