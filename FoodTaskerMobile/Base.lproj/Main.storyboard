@@ -270,7 +270,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" id="Xiy-i6-myD">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" id="Xiy-i6-myD" customClass="MealViewCell" customModule="FoodTaskerMobile" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xiy-i6-myD" id="5HL-JJ-L9w">
@@ -319,6 +319,10 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
+                                    <outlet property="imgMealImage" destination="IS8-Y9-TSP" id="FOs-lp-6Ge"/>
+                                    <outlet property="lbMealName" destination="mlw-6H-Csm" id="N4Q-qb-lx4"/>
+                                    <outlet property="lbMealPrice" destination="svk-hW-xGb" id="Sw5-qh-Jq8"/>
+                                    <outlet property="lbMealShortDescription" destination="5s7-cQ-Gs5" id="mao-E2-ssF"/>
                                     <segue destination="fj3-Oa-aVb" kind="show" identifier="MealDetails" id="1SD-Gj-SOe"/>
                                 </connections>
                             </tableViewCell>
@@ -332,7 +336,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uev-JX-Ntz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1132" y="2247"/>
+            <point key="canvasLocation" x="1131.8840579710145" y="2246.6517857142858"/>
         </scene>
         <!--Meal Details View Controller-->
         <scene sceneID="Zpd-nP-At5">
