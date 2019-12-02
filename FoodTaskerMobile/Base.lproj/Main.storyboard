@@ -149,13 +149,16 @@
                             <searchBar contentMode="redraw" placeholder="Search restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="fHm-GR-7Tc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="8Of-yo-mBC" id="Wd1-jt-Q1L"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="226" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-QN-cCZ">
                                 <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" id="Kca-Gf-7Lz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" id="Kca-Gf-7Lz" customClass="RestaurantViewCell" customModule="FoodTaskerMobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kca-Gf-7Lz" id="Mi5-4b-ckX">
@@ -207,6 +210,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <connections>
+                                            <outlet property="imgRestaurantLogo" destination="dFF-mi-2va" id="DfP-Ut-QDG"/>
+                                            <outlet property="lbRestaurantAddress" destination="UQX-nj-LOR" id="iON-7T-tQa"/>
+                                            <outlet property="lbRestaurantName" destination="ThD-Nz-YmF" id="dyh-iU-kYj"/>
                                             <segue destination="fcx-Ip-ggn" kind="show" identifier="MealList" id="659-JW-8Eg"/>
                                         </connections>
                                     </tableViewCell>
@@ -238,6 +244,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="KFO-RS-aAh" id="H8X-y2-GY4"/>
+                        <outlet property="searchRestaurant" destination="fHm-GR-7Tc" id="6B7-HH-vNY"/>
+                        <outlet property="tbvRestaurant" destination="Ghf-QN-cCZ" id="LDB-9n-Axa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxY-vP-E8M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
