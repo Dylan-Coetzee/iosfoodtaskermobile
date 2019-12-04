@@ -33,7 +33,7 @@ class RestaurantViewController: UIViewController {
     
     func loadRestaurants() {
         
-        showActivityIndicator()
+        Helpers.showActivityIndicator(activityIndicator, view)
         
         APIManager.shared.getRestaurants { (json) in
             if json != nil {
@@ -45,35 +45,10 @@ class RestaurantViewController: UIViewController {
                     }
                     
                     self.tbvRestaurant.reloadData()
-                    self.hideActivityIndicator()
+                    Helpers.hideActivityIndicator(self.activityIndicator)
                 }
             }
         }
-    }
-    
-    func loadImage(imageView: UIImageView, urlString: String) {
-        let imgURL: URL = URL(string: urlString)!
-        URLSession.shared.dataTask(with: imgURL) { (data, response, error) in
-            guard let data = data, error == nil else { return }
-            DispatchQueue.main.async {
-                imageView.image = UIImage(data: data)
-            }
-        }.resume()
-    }
-    
-    func showActivityIndicator() {
-        activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
-        activityIndicator.center = view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.style = UIActivityIndicatorView.Style.large
-        activityIndicator.color = UIColor.black
-        
-        view.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
-    }
-    
-    func hideActivityIndicator() {
-        activityIndicator.stopAnimating()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -123,8 +98,7 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
         cell.lbRestaurantAddress.text = restaurant.address!
         
         if let logoName = restaurant.logo {
-            let url = "\(logoName)"
-            loadImage(imageView: cell.imgRestaurantLogo, urlString: url)
+            Helpers.loadImage(cell.imgRestaurantLogo, "\(logoName)")
         }
         return cell
     }

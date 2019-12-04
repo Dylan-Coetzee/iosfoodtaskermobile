@@ -21,6 +21,6 @@ class Meal {
         self.name = json["name"].string
         self.short_description = json["short_description"].string
         self.image = json["image"].string
-        self.price = json["price"].string as! Float
+        self.price = json["price"].float
     }
 }
