@@ -12,6 +12,7 @@
 		8448FF592395A784005E70A1 /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF582395A784005E70A1 /* RestaurantViewCell.swift */; };
 		8448FF5B2395CF7E005E70A1 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF5A2395CF7E005E70A1 /* Meal.swift */; };
 		8448FF5D2395D07F005E70A1 /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448FF5C2395D07F005E70A1 /* MealViewCell.swift */; };
+		846EC9B823D79ED5005E1ED5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 846EC9B723D79ED5005E1ED5 /* CoreLocation.framework */; };
 		84793C2E238C508600441E71 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84793C2D238C508600441E71 /* APIManager.swift */; };
 		84793C30238C5E7600441E71 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84793C2F238C5E7600441E71 /* Constants.swift */; };
 		848A0F8F238A9C8100291110 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A0F8E238A9C8100291110 /* PaymentViewController.swift */; };
@@ -67,6 +68,7 @@
 		8448FF582395A784005E70A1 /* RestaurantViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
 		8448FF5A2395CF7E005E70A1 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		8448FF5C2395D07F005E70A1 /* MealViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewCell.swift; sourceTree = "<group>"; };
+		846EC9B723D79ED5005E1ED5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		84793C2D238C508600441E71 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		84793C2F238C5E7600441E71 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		848A0F8E238A9C8100291110 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846EC9B823D79ED5005E1ED5 /* CoreLocation.framework in Frameworks */,
 				848A945D23872F0900BA4C98 /* MapKit.framework in Frameworks */,
 				ECACFC6545FC567B4E873D95 /* Pods_FoodTaskerMobile.framework in Frameworks */,
 			);
@@ -195,6 +198,7 @@
 		848A945A23872EF700BA4C98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				846EC9B723D79ED5005E1ED5 /* CoreLocation.framework */,
 				848A945B23872EF700BA4C98 /* MapKit.framework */,
 				F48B334550EC80DC3581A6D6 /* Pods_FoodTaskerMobile.framework */,
 				2FB151B546771CDC304791E3 /* Pods_FoodTaskerMobile_FoodTaskerMobileUITests.framework */,
