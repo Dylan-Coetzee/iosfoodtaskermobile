@@ -52,12 +52,16 @@ class TrayViewController: UIViewController {
             loadMeals()
         }
         
+        
+        
         //Show current user location
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
+            locationManager.requestWhenInUseAuthorization() //This got the prompt for location working.
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestAlwaysAuthorization()
+            locationManager.distanceFilter = kCLDistanceFilterNone
+            //locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
             
             self.map.showsUserLocation = true
@@ -97,4 +101,35 @@ extension TrayViewController : UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+}
+
+extension TrayViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let address = textField.text
+        let geocoder = CLGeocoder()
+        Tray.currentTray.address = address
+        
+        geocoder.geocodeAddressString(address!) { (placemarks, error) in
+            
+            if (error != nil) {
+                print("Error: ", error)
+            }
+            
+            if let placemark = placemarks?.first {
+                let coordinates: CLLocationCoordinate2D = placemark.location!.coordinate
+                let region = MKCoordinateRegion(center: coordinates, span: MKCoordinateSpan(latitudeDelta: 0.01,longitudeDelta: 0.01))
+                
+                self.map.setRegion(region, animated: true)
+                self.locationManager.stopUpdatingLocation()
+                
+                //Create drop pin for the map
+                let dropPin = MKPointAnnotation()
+                dropPin.coordinate = coordinates
+                
+                self.map.addAnnotation(dropPin)
+            }
+        }
+        
+        return true
+    }
 }
