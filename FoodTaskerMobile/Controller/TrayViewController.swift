@@ -52,8 +52,6 @@ class TrayViewController: UIViewController {
             loadMeals()
         }
         
-        
-        
         //Show current user location
         if CLLocationManager.locationServicesEnabled() {
             locationManager = CLLocationManager()
@@ -71,6 +69,27 @@ class TrayViewController: UIViewController {
     func loadMeals() {
         self.tbvMeals.reloadData()
         self.lbTotal.text = "$\(Tray.currentTray.getTotal())"
+    }
+    
+    //Validation for payment before moving to payment screen.
+    @IBAction func addPayment(_ sender: AnyObject) {
+        
+        if self.tbAddress.text == "" {
+            //Show alert field is required.
+            let alertView = UIAlertController (title: "No Address", message: "Address is required", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+                self.tbAddress.becomeFirstResponder()
+            })
+            
+            alertView.addAction(okAction)
+            
+            self.present(alertView, animated: true, completion: nil)
+        }
+        else {
+            Tray.currentTray.address  = tbAddress.text
+            self.performSegue(withIdentifier: "AddPayment", sender: self)
+        }
     }
 }
 
@@ -93,14 +112,19 @@ extension TrayViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return Tray.currentTray.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TrayItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrayItemCell", for: indexPath) as! TrayViewCell
+        
+        let  tray = Tray.currentTray.items[indexPath.row]
+        cell.lbQty.text = "\(tray.qty)"
+        cell.lbMealName.text = tray.meal.name
+        cell.lbSubTotal.text = "R\(tray.meal.price! * Float(tray.qty))"
+        
         return cell
     }
-    
 }
 
 extension TrayViewController : UITextFieldDelegate {

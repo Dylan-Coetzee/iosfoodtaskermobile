@@ -155,7 +155,7 @@ class APIManager {
     
     //API create new order
     func createOrder(stripeToken: String, completionHandler: @escaping (JSON) -> Void) {
-        let path = "api/customer/order/add"
+        let path = "api/customer/order/add/"
         let simpleArray = Tray.currentTray.items
         let jsonArray = simpleArray.map { item in
             return [
@@ -187,13 +187,15 @@ class APIManager {
     
     // API - Getting the latest order (Customer)
     func getLatestOrder(completionHandler: @escaping (JSON) -> Void) {
-        let path = "api/customer/order/latest"
+        let path = "api/customer/order/latest/"
         let params : [String: Any] = [
             "access_token": self.accessToken
         ]
         
-        requestServer(.get, path, params, URLEncoding(), completionHandler)
+        requestServer(.get, path, params, JSONEncoding.default, completionHandler)
     }
+    
+    
     
     
 }

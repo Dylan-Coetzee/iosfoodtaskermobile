@@ -15,4 +15,4 @@ let CLIENT_SECRET: String = "EHb4IydQ5y3aSm6LZ7p0DFVMixjY9l5YjiHwghs8Hs1Km5XKKYg
 let USERTYPE_CUSTOMER = "customer"
 let USERTYPE_DRIVER = "driver"
 
-let STRIPE_PUBLIC_KEY = "pk_live_Dx1yAhibez0zleDqQubCpmeo000fuex9EF"
+let STRIPE_PUBLIC_KEY = "pk_test_dk0ocbzrBWwrzmTFnqOTgtYZ00Atc82oqG"

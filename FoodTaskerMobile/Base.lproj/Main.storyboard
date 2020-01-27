@@ -270,7 +270,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" id="Xiy-i6-myD" customClass="MealViewCell" customModule="FoodTaskerMobile" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MealCell" id="Xiy-i6-myD" customClass="MealViewCell" customModule="FoodTaskerMobile" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xiy-i6-myD" id="5HL-JJ-L9w">
@@ -508,14 +508,14 @@
                                 </constraints>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrayItemCell" id="D40-Gk-hEb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrayItemCell" id="D40-Gk-hEb" customClass="TrayViewCell" customModule="FoodTaskerMobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D40-Gk-hEb" id="FNq-d7-eGg">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-na-ETJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXL-na-ETJ">
                                                     <rect key="frame" x="20" y="11.5" width="21" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="21" id="0Uh-1K-3Df"/>
@@ -552,6 +552,11 @@
                                                 <constraint firstItem="gXL-na-ETJ" firstAttribute="centerY" secondItem="FNq-d7-eGg" secondAttribute="centerY" id="uaf-pN-382"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbMealName" destination="qGS-ZJ-iUJ" id="ZlI-lJ-HQ1"/>
+                                            <outlet property="lbQty" destination="gXL-na-ETJ" id="Dha-rV-IwL"/>
+                                            <outlet property="lbSubTotal" destination="ltO-Zy-7gy" id="8s5-X5-nZF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -642,7 +647,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6Ye-sx-yCb" kind="show" id="Yf3-03-3Vg"/>
+                                    <action selector="addPayment:" destination="pMG-il-tXq" eventType="touchUpInside" id="Lme-7G-AEF"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cx-z8-1ay">
@@ -698,6 +703,7 @@
                         <outlet property="viewAddress" destination="ROf-mj-ksL" id="Lp3-mR-7gq"/>
                         <outlet property="viewMap" destination="3Cx-z8-1ay" id="NtP-3y-RgV"/>
                         <outlet property="viewTotal" destination="Kn9-gT-tMm" id="1cJ-NO-g0B"/>
+                        <segue destination="6Ye-sx-yCb" kind="show" identifier="AddPayment" id="w3k-GP-44f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Miw-RU-hKy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -731,7 +737,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rSv-ta-6gU" kind="show" identifier="ViewOrder" id="qFj-HV-Vtf"/>
+                                    <action selector="placeOrder:" destination="6Ye-sx-yCb" eventType="touchUpInside" id="uoo-yb-XAZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -748,6 +754,7 @@
                     <navigationItem key="navigationItem" id="TRC-vA-Fwt"/>
                     <connections>
                         <outlet property="cardTextField" destination="mQr-Md-t6C" id="s7M-jq-py1"/>
+                        <segue destination="rSv-ta-6gU" kind="show" identifier="ViewOrder" id="fnH-VI-6Dd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yW5-xb-jS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1121,7 +1128,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eNd-o3-WFv"/>
-        <segue reference="qFj-HV-Vtf"/>
+        <segue reference="fnH-VI-6Dd"/>
         <segue reference="uHt-nl-9Av"/>
     </inferredMetricsTieBreakers>
 </document>
