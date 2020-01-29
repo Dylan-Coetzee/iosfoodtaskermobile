@@ -189,13 +189,13 @@ class APIManager {
     func getLatestOrder(completionHandler: @escaping (JSON) -> Void) {
         let path = "api/customer/order/latest/"
         let params : [String: Any] = [
-            "access_token": self.accessToken
+            "access_token": self.accessToken!
         ]
         
-        requestServer(.get, path, params, JSONEncoding.default, completionHandler)
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
     
-    
+
     
     
 }

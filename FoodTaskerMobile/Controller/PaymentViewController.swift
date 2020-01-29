@@ -22,8 +22,11 @@ class PaymentViewController: UIViewController {
     @IBAction func placeOrder(_ sender: AnyObject) {
         
         APIManager.shared.getLatestOrder {(json) in
+            
+            let status = json["order"]["status"].string
+            
             // Customer can only create one or and wait for it to complete before creating a new one.
-            if json["order"]["status"] == nil || json["json"]["status"] == "Delivered" {
+            if status == nil || status == "Delivered" {
                 //Processing the payment and create an order
                 
                 //let card = self.cardTextField.cardParams
