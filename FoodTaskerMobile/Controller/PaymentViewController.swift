@@ -33,13 +33,14 @@ class PaymentViewController: UIViewController {
                 
                 let cardParams = STPCardParams()
 
-                cardParams.number = self.cardTextField?.cardNumber
+                cardParams.number = self.cardTextField?.cardNumber!
                 cardParams.expMonth = (self.cardTextField?.expirationMonth)!
                 cardParams.expYear = (self.cardTextField?.expirationYear)!
                 cardParams.cvc = self.cardTextField?.cvc
                 
                 //Connect to stripe
-                STPAPIClient.shared().createToken(withCard: cardParams, completion: { (token, error) in
+                //STPAPIClient.shared().createToken(withCard: cardParams, completion: { (token, error) in
+                STPAPIClient.shared().createToken(withCard: cardParams) { (token: STPToken?, error: Error?) in
                     if let myError = error {
                         print("Error:", myError)
                     } else if let stripeToken = token {
@@ -48,7 +49,7 @@ class PaymentViewController: UIViewController {
                             self.performSegue(withIdentifier: "ViewOrder", sender: self)
                         }
                     }
-                })
+                }
             } else {
                 //Show an alert message, order not complete.
                 

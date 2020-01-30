@@ -167,7 +167,7 @@ class APIManager {
         if JSONSerialization.isValidJSONObject(jsonArray) {
             do {
                 let data = try  JSONSerialization.data(withJSONObject: jsonArray, options: [])
-                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)!
                 
                 let params: [String: Any] = [
                     "access_token": self.accessToken,
@@ -177,7 +177,7 @@ class APIManager {
                     "address": Tray.currentTray.address!
                 ]
                 
-                requestServer(.post, path, params, URLEncoding(), completionHandler)
+                requestServer(.post, path, params, URLEncoding.default, completionHandler)
             }
             catch {
                 print("JSON serialization failed: \(error)")
