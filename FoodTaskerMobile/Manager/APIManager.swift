@@ -170,14 +170,16 @@ class APIManager {
                 let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)!
                 
                 let params: [String: Any] = [
-                    "access_token": self.accessToken,
+                    "access_token": self.accessToken!,
                     "stripe_token": stripeToken,
                     "restaurant_id": "\(Tray.currentTray.restaurant!.id!)",
                     "order_details": dataString,
                     "address": Tray.currentTray.address!
                 ]
                 
-                requestServer(.post, path, params, URLEncoding.default, completionHandler)
+                requestServer(.post, path, params, URLEncoding.httpBody, completionHandler)
+                //UrlEncoding.http fix the issue with parameters not picking up in django side
+                //(AccessToken matching query does not exist.)
             }
             catch {
                 print("JSON serialization failed: \(error)")
