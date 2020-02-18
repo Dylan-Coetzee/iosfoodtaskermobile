@@ -12,8 +12,9 @@ import FBSDKLoginKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var bLogin: UIButton!
-    
     @IBOutlet weak var bLogout: UIButton!
+    @IBOutlet weak var switchUser: UISegmentedControl!
+    
     var fbLoginSuccess = false
     var userType: String = USERTYPE_CUSTOMER
     
@@ -33,8 +34,11 @@ class LoginViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        
+        userType = userType.capitalized
+        
         if(AccessToken.current != nil && fbLoginSuccess == true) {
-            performSegue(withIdentifier: "CustomerView", sender: self)
+            performSegue(withIdentifier: "\(userType)View", sender: self)
         }
     }
     
@@ -79,4 +83,16 @@ class LoginViewController: UIViewController {
             })
         }
     }
+    
+    //Switch Segment Driver vs Customer
+    @IBAction func switchAccount(_ sender: AnyObject) {
+        let type = switchUser.selectedSegmentIndex
+        
+        if type == 0 {
+            userType = USERTYPE_CUSTOMER
+        } else {
+            userType = USERTYPE_DRIVER
+        }
+    }
+    
 }

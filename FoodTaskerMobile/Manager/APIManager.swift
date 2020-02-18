@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
+import MapKit
 
 class APIManager {
     static let shared = APIManager()
@@ -197,7 +198,65 @@ class APIManager {
         requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
     
-
+    // API - Getting drivers location
+    func getDriverLocation(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/customer/driver/location/"
+        let params : [String: Any] = [
+            "access_token": self.accessToken!
+        ]
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
     
     
+    //***DRIVERS***
+    
+    //API - getting list of orders that are ready
+    func getDriverOrders(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/orders/ready/"
+        requestServer(.get, path, nil, JSONEncoding.default, completionHandler)
+    }
+    
+    
+    //API - Picking up a ready order
+    
+    func pickOrder(orderId: Int, completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/orders/pick/"
+        let params: [String: Any] = [
+            "order_id": "\(orderId)",
+            "access_token": self.accessToken!
+        ]
+        
+        requestServer(.post, path, params, URLEncoding.httpBody, completionHandler)
+    }
+    
+    func getCurrentDriverOrder(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/orders/latest/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken!
+        ]
+        
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    
+    //API - Update drivers location
+    func updateLocation(location: CLLocationCoordinate2D, completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/location/update/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken!,
+            "location": "\(location.latitude),\(location.longitude)"
+        ]
+        
+        requestServer(.post, path, params, URLEncoding.httpBody, completionHandler)
+    }
+    
+    // API - Complete the order
+    func completeOrder(orderId: Int, completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/orders/complete/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken!,
+            "order_id": "\(orderId)"
+        ]
+        
+        requestServer(.post, path, params, URLEncoding.httpBody, completionHandler)
+    }
 }
