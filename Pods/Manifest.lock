@@ -1,0 +1,69 @@
+PODS:
+  - Alamofire (5.0.0-rc.3)
+  - Charts (3.4.0):
+    - Charts/Core (= 3.4.0)
+  - Charts/Core (3.4.0)
+  - FBSDKCoreKit (5.11.1):
+    - FBSDKCoreKit/Basics (= 5.11.1)
+    - FBSDKCoreKit/Core (= 5.11.1)
+  - FBSDKCoreKit/Basics (5.11.1)
+  - FBSDKCoreKit/Core (5.11.1):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (5.11.1):
+    - FBSDKLoginKit/Login (= 5.11.1)
+  - FBSDKLoginKit/Login (5.11.1):
+    - FBSDKCoreKit (~> 5.0)
+  - FBSDKShareKit (5.11.1):
+    - FBSDKShareKit/Share (= 5.11.1)
+  - FBSDKShareKit/Share (5.11.1):
+    - FBSDKCoreKit (~> 5.0)
+  - Stripe (18.2.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`)
+  - Charts (from `https://github.com/danielgindi/Charts.git`)
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
+  - Stripe
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+SPEC REPOS:
+  trunk:
+    - FBSDKCoreKit
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - Stripe
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :git: https://github.com/Alamofire/Alamofire.git
+  Charts:
+    :git: https://github.com/danielgindi/Charts.git
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: 80d379bea0860991a6392b0dc52dcad0c466ce8f
+    :git: https://github.com/Alamofire/Alamofire.git
+  Charts:
+    :commit: 847e8225a5b6912c50ccbccdf19a4aa7e2ce3287
+    :git: https://github.com/danielgindi/Charts.git
+  SwiftyJSON:
+    :commit: bad5f2f94a71216a32c030a3586bdcfc1f7e660b
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  Charts: ef59ae1e7eaa53f10a16a0009c434051292ba808
+  FBSDKCoreKit: 5aada61a229054694810f3cee231f986004b3c49
+  FBSDKLoginKit: 0e4572e0279e477103b57978e3ea05fac1dd673d
+  FBSDKShareKit: 2b4435ecb134e2af8a636524e43b7813e3d60a0b
+  Stripe: a468d5f39703807e840fdfed39572ffad0aaf053
+  SwiftyJSON: f0574c07d8ca1644050db687067209e3033a89a0
+
+PODFILE CHECKSUM: 92375c31d363c1d4aa39e03f3d9ecbf5ab4efe68
+
+COCOAPODS: 1.8.4
