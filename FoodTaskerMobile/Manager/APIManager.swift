@@ -249,7 +249,7 @@ class APIManager {
         requestServer(.post, path, params, URLEncoding.httpBody, completionHandler)
     }
     
-    // API - Complete the order
+    //API - Complete the order
     func completeOrder(orderId: Int, completionHandler: @escaping (JSON) -> Void) {
         let path = "api/driver/orders/complete/"
         let params: [String: Any] = [
@@ -259,4 +259,17 @@ class APIManager {
         
         requestServer(.post, path, params, URLEncoding.httpBody, completionHandler)
     }
+    
+    //API - Getting driver's revenue
+    func getDriverRevenue(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/revenue/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken!
+        ]
+        
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    
+    
+    
 }

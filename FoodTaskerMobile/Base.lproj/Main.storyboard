@@ -354,7 +354,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paT-rL-euJ">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="paT-rL-euJ" customClass="BarChartView" customModule="Charts">
                                 <rect key="frame" x="10" y="118" width="394" height="654"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -373,6 +373,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="1OB-oV-Uqc" id="vq4-II-k4v"/>
+                        <outlet property="viewChart" destination="paT-rL-euJ" id="vqz-X9-bxs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KS8-OH-lJr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
